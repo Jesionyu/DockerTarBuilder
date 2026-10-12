@@ -1,7 +1,9 @@
 name: Get-ARM64-Docker-Images-Release
 
 on:
-  workflow_dispatch:
+ push:
+  branches: [ main ]
+ workflow_dispatch:
     inputs:
       docker_images:
         description: '请填写docker镜像名称，多个用英文逗号分开'
